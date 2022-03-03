@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+   
+    <title>John Snow Cholera Map</title>
+    <style type="text/css">
+
+      body {
+        height: 100%;
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      svg {
+        width: 55%;
+        height: 100%;
+      }
+
+      .street-path {
+        stroke: #000000;
+      }
+
+      .death-circle:hover {
+        stroke: currentColor;
+        stroke-width: 1px;
+      }
+
+      .tooltip {
+        position: absolute;
+        left: 0;
+        top: 0;
+        visibility: hidden;
+        pointer-events: none;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+          0 1px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+
+      .tooltip.visible {
+        visibility: visible;
+      }
+
+      .tooltip table td {
+        text-align: left;
+      }
+
+      .legend {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin: 1rem;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+      }
+
+      .legend-circle {
+        margin-right: 0.5rem;
+        border-radius: 50%;
+      }
+
+      .filters {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1rem;
+      }
+
+
+      .filters .filters-title {
+        font-weight: bold;
+      }
+
+      .filters .filters-subtitle {
+        font-size: 0.875rem;
+      }
+
+      .filters select {
+        display: block;
+        font-family: inherit;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+      Promise.all([
+        d3.json("streets.json"),
+        d3.csv("deaths_age_sex.csv", d3.autoType),
+        d3.csv("pumps.csv", d3.autoType),
+      ]).then(([streetsData, deathsData, pumpsData]) => {
+     
+        var genders = ["Male", "Female"];
+        var ages = ["0-10", "11-20", "21-40", "41-60", "61-80", "> 80"];
+
+        var svg = d3.select("body").append("svg");
+        var width = 500;
+        var height = 500;
+        var size = Math.min(width, height);
+
+        var deathRadius = 2;
+        var pumpRadius = 6;
+
+        var x = d3
+          .scaleLinear()
+          .domain([2, 20])
+          .range([-250,250]);
+        var y = d3
+          .scaleLinear()
+          .domain([2, 20])
+          .range([-250,250]);
+        var color = d3
+          .scaleOrdinal()
+          .domain(["Male", "Female", "Pump"])
+          .range(["lightcoral", "darkblue", "black"]);
+
+        var line = d3
+          .line()
+          .x((d) => x(d.x))
+          .y((d) => y(d.y));
+
+        var zoom = d3.zoom().on("zoom", zoomed);
+
+        function zoomed(event) {
+          var t = event.transform;
+          g.attr("transform", t);
+          death.attr("r", deathRadius / t.k);
+          pump.attr("r", pumpRadius / t.k);
+        }
+
+        svg.attr("viewBox", [-250, -250, 500, 500]).call(zoom);
+        var g = svg.append("g").attr("class", "map-g");
+
+        g.append("g")
+          .attr("class", "streets-g")
+          .attr("fill", "none")
+          .attr("stroke", "currentColor")
+          .selectAll(".street-path")
+          .data(streetsData)
+          .join("path")
+          .attr("class", "street-path")
+          .attr("d", line);
+
+        var death = g
+          .append("g")
+          .attr("class", "deaths-g")
+          .selectAll(".death-circle")
+          .data(deathsData)
+          .join("circle")
+          .attr("class", "death-circle")
+          .attr("fill", (d) => color(genders[d.gender]))
+          .attr("r", deathRadius)
+          .attr("cx", (d) => x(d.x))
+          .attr("cy", (d) => y(d.y))
+          .on("mouseenter", entered)
+          .on("mousemove", moved)
+          .on("mouseleave", left);
+
+        var pump = g
+          .append("g")
+          .attr("class", "pumps-g")
+          .selectAll(".pump-circle")
+          .data(pumpsData)
+          .join("circle")
+          .attr("class", "pump-circle")
+          .attr("fill", color("Pump"))
+          .attr("r", pumpRadius)
+          .attr("cx", (d) => x(d.x))
+          .attr("cy", (d) => y(d.y));
+
+        function drawFiltered() {
+          death.style("display", (d) =>
+            selected.genders.includes(d.gender) && selected.ages.includes(d.age)
+              ? null
+              : "none"
+          );
+        }
+
+        var legend = d3.select("body").append("div").attr("class", "legend");
+
+        var legendItem = legend
+          .selectAll(".legend-item")
+          .data([
+            { size: deathRadius, color: color("Male"), label: "Male Death" },
+            { size: deathRadius, color: color("Female"), label: "Female Death" },
+            { size: pumpRadius, color: color("Pump"), label: "Water Pump" },
+          ])
+          .join("div")
+          .attr("class", "legend-item");
+
+        legendItem
+          .append("div")
+          .attr("class", "legend-circle")
+          .style("width", (d) => `${d.size * 2}px`)
+          .style("height", (d) => `${d.size * 2}px`)
+          .style("background-color", (d) => d.color);
+
+        legendItem
+          .append("div")
+          .attr("class", "legend-label")
+          .text((d) => d.label);
+
+        var selected = {
+          genders: d3.range(genders.length),
+          ages: d3.range(ages.length),
+        };
+
+        var filters = d3.select("body").append("div").attr("class", "filters");
+
+        var filtersTitle = filters.append("div");
+        filtersTitle.append("div").attr("class", "filters-title").text("Filters");
+        filtersTitle
+          .append("div")
+          .attr("class", "filters-subtitle");
+
+        var genderFilter = filters.append("div").attr("class", "filter");
+        genderFilter.append("label").attr("for", "gender-filer").text("Genders");
+        genderFilter
+          .append("select")
+          .attr("id", "gender-filter")
+          .attr("multiple", "multiple")
+          .attr("size", genders.length)
+          .on("change", (event) => {
+            selected.genders = Array.from(event.target.selectedOptions).map(
+              (d) => +d.value
+            );
+            drawFiltered();
+          })
+          .selectAll("option")
+          .data(genders)
+          .join("option")
+          .attr("selected", "selected")
+          .attr("value", (d, i) => i)
+          .text((d) => d);
+
+        var ageFilter = filters.append("div").attr("class", "filter");
+        ageFilter.append("label").attr("for", "age-filer").text("Ages");
+        ageFilter
+          .append("select")
+          .attr("id", "age-filter")
+          .attr("multiple", "multiple")
+          .attr("size", ages.length)
+          .on("change", (event) => {
+            selected.ages = Array.from(event.target.selectedOptions).map(
+              (d) => +d.value
+            );
+            drawFiltered();
+          })
+          .selectAll("option")
+          .data(ages)
+          .join("option")
+          .attr("selected", "selected")
+          .attr("value", (d, i) => i)
+          .text((d) => d);
+
+        var tooltip = d3.select("body").append("div").attr("class", "tooltip");
+
+        function entered(event, d) {
+          var gender = genders[d.gender];
+          var age = ages[d.age];
+          tooltip.html(`
+            <table>
+              <tbody>
+                <tr>
+                  <th>Gender </th>
+                  <td>${gender}</td>
+                </tr>
+                <tr>
+                  <th>Age </th>
+                  <td>${age}</td>
+                </tr>
+              </tbody>
+            </table>
+          `);
+          tooltip.classed("visible", true);
+        }
+
+        function moved(event) {
+          var [x, y] = d3.pointer(event, document.body);
+          tooltip.style("transform", `translate(${x + 10}px,${y + 10}px)`);
+        }
+
+        function left() {
+          tooltip.classed("visible", false);
+        }
+      });
+
+          
+          </script>
+        </body>
+      </html>
