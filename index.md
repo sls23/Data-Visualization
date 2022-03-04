@@ -2,7 +2,7 @@
 
 ## Design Process
 
-The way I began my design process was by first sketching out my ideas so that I could then have a plan set when it came to udnerstanding the code. I set out the steps in the order I had thought I would want to proceed with.
+The way I began my design process was by first sketching out my ideas so that I could then have a plan set when it came to understanding the code. I set out the steps in the order I had thought I would want to proceed with.
 
 
 ![process](https://user-images.githubusercontent.com/95446588/156775604-1a35c354-6f76-4bb4-8f7f-d7b6e53c1c2f.jpg)
