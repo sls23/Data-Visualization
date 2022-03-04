@@ -48,22 +48,22 @@ You can explore this graph [as its own web page here](femalegraph.html).
 
 ## References 
 ### List of References I used to create my map 
-#####https://observablehq.com/@d3/d3-autotype
-#####https://www.d3indepth.com/zoom-and-pan/
-#####https://www.w3schools.com/css/css_positioning.asp
-#####https://www.d3-graph-gallery.com/graph/interactivity_tooltip.html
-#####http://using-d3js.com/04_07_ordinal_scales.html
-#####https://benclinkinbeard.com/d3tips/using-arrow-functions-with-d3/
-#####http://using-d3js.com/05_02_lines.html
-#####https://ishadeed.com/article/min-max-css/
+####https://observablehq.com/@d3/d3-autotype
+####https://www.d3indepth.com/zoom-and-pan/
+####https://www.w3schools.com/css/css_positioning.asp
+####https://www.d3-graph-gallery.com/graph/interactivity_tooltip.html
+####http://using-d3js.com/04_07_ordinal_scales.html
+####https://benclinkinbeard.com/d3tips/using-arrow-functions-with-d3/
+####http://using-d3js.com/05_02_lines.html
+####https://ishadeed.com/article/min-max-css/
 
 
 ### List of References I used to create my barcharts 
-#####https://www.youtube.com/watch?v=IJ8pH19qPkg&list=PLlbbWgBRF8EfU-MZNicdIGVKMIX-6krG8&index=15
+####https://www.youtube.com/watch?v=IJ8pH19qPkg&list=PLlbbWgBRF8EfU-MZNicdIGVKMIX-6krG8&index=15
 
 
 ### List of References I used to create my website 
-#####https://github.com/melaniewalsh/Sample-Map-Website
+####https://github.com/melaniewalsh/Sample-Map-Website
 
 
 
