@@ -62,7 +62,7 @@ You can explore this graph [as its own web page here](femalegraph.html).
 1. https://www.youtube.com/watch?v=IJ8pH19qPkg&list=PLlbbWgBRF8EfU-MZNicdIGVKMIX-6krG8&index=15
 
 ### List of References I used to create my website 
-1.https://github.com/melaniewalsh/Sample-Map-Website
+1. https://github.com/melaniewalsh/Sample-Map-Website
 
 
 
