@@ -15,17 +15,6 @@ The way I arranged my charts I think make the most sense. I started with the cho
 I thought it would be useful to zoom into the map so that if you were curious about a particular area it would be easy to investigate. 
 The filter I chose on the map allows you to select to see males or females as well as which age group to look at. 
 
-## Facts Learned 
-1. The two age groups that were most effected by Cholera were the people below the age of 10 and above the age of 80. This is not surprising since those over 80 probably have weaker or comprimised immune systems and those under 10 may have no had enough time to stregthen theirs yet. 
-2. The difference in deaths between age groups was not vastly different between the two genders. In both cases regardless of gender the older and younger group were effected. This leads me to believe that gender was likely not a huge influence. There were 284 male deaths and 287 female deaths again not drawing major differences between the genders.
-
-![male](https://user-images.githubusercontent.com/95446588/156775026-1b5a5fb7-c7c1-4830-bda8-cef10c61e08d.jpg)
-![female](https://user-images.githubusercontent.com/95446588/156775105-9bb520d3-35cf-4d9a-ba4c-e6c1ac158a05.jpg)
-
-3. We can see that the days that resulted in the most deaths were August 1 and August 2. The deaths leading up to August 1 are doubled after this day. August 2 reslts in fewer deaths than the 1st but still a significantly higher number. This data could be used to see what day majority of people were infected based on when they all died. 
-![days](https://user-images.githubusercontent.com/95446588/156775124-6e74c157-c183-46be-936f-18faa3ba1718.jpg)
-
-
 ## Cholera Map 
 
 <iframe src="map.html" height="500" width="500"></iframe>
@@ -45,4 +34,27 @@ You can explore this graph [as its own web page here](malegraph.html).
 <iframe src="femalegraph.html" height="500" width="500"></iframe>
 
 You can explore this graph [as its own web page here](femalegraph.html).
+
+
+## Facts Learned 
+1. The two age groups that were most effected by Cholera were the people below the age of 10 and above the age of 80. This is not surprising since those over 80 probably have weaker or comprimised immune systems and those under 10 may have no had enough time to stregthen theirs yet. 
+2. The difference in deaths between age groups was not vastly different between the two genders. In both cases regardless of gender the older and younger group were effected. This leads me to believe that gender was likely not a huge influence. There were 284 male deaths and 287 female deaths again not drawing major differences between the genders.
+
+![male](https://user-images.githubusercontent.com/95446588/156775026-1b5a5fb7-c7c1-4830-bda8-cef10c61e08d.jpg)
+![female](https://user-images.githubusercontent.com/95446588/156775105-9bb520d3-35cf-4d9a-ba4c-e6c1ac158a05.jpg)
+
+3. We can see that the days that resulted in the most deaths were August 1 and August 2. The deaths leading up to August 1 are doubled after this day. August 2 reslts in fewer deaths than the 1st but still a significantly higher number. This data could be used to see what day majority of people were infected based on when they all died. 
+![days](https://user-images.githubusercontent.com/95446588/156775124-6e74c157-c183-46be-936f-18faa3ba1718.jpg)
+
+
+## Facts Learned 
+1. The two age groups that were most effected by Cholera were the people below the age of 10 and above the age of 80. This is not surprising since those over 80 probably have weaker or comprimised immune systems and those under 10 may have no had enough time to stregthen theirs yet. 
+2. The difference in deaths between age groups was not vastly different between the two genders. In both cases regardless of gender the older and younger group were effected. This leads me to believe that gender was likely not a huge influence. There were 284 male deaths and 287 female deaths again not drawing major differences between the genders.
+
+![male](https://user-images.githubusercontent.com/95446588/156775026-1b5a5fb7-c7c1-4830-bda8-cef10c61e08d.jpg)
+![female](https://user-images.githubusercontent.com/95446588/156775105-9bb520d3-35cf-4d9a-ba4c-e6c1ac158a05.jpg)
+
+3. We can see that the days that resulted in the most deaths were August 1 and August 2. The deaths leading up to August 1 are doubled after this day. August 2 reslts in fewer deaths than the 1st but still a significantly higher number. This data could be used to see what day majority of people were infected based on when they all died. 
+![days](https://user-images.githubusercontent.com/95446588/156775124-6e74c157-c183-46be-936f-18faa3ba1718.jpg)
+
 
