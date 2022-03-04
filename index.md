@@ -31,6 +31,8 @@ You can explore this graph [as its own web page here](deathdays.html).
 <iframe src="malegraph.html" height="500" width="500"></iframe>
 You can explore this graph [as its own web page here](malegraph.html).
 
+## Female Death Count
+
 <iframe src="femalegraph.html" height="500" width="500"></iframe>
 
 You can explore this graph [as its own web page here](femalegraph.html).
