@@ -4,7 +4,8 @@
 
 The way I began my design process was by first sketching out my ideas so that I could then have a plan set when it came to udnerstanding the code. I set out the steps in the order I had thought I would want to proceed with.
 
-![IMG_8500](https://user-images.githubusercontent.com/95446588/156774609-1cb41171-0607-4866-bd76-4aa5ecf1a4f0.jpg)
+
+![male](https://user-images.githubusercontent.com/95446588/156775026-1b5a5fb7-c7c1-4830-bda8-cef10c61e08d.jpg)
 
 ## Design Choices 
 I chose to create visualizations that isolated the deaths of males and females individually for comparison. To do so I had to create separate datasets. 
