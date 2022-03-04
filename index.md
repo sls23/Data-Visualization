@@ -20,7 +20,7 @@ The filter I chose on the map allows you to select to see males or females as we
 ## Cholera Map 
 
 <iframe src="map.html" height="500" width="500"></iframe>
-You can explore this graph [as its own web page here](deathdays.html).
+You can explore this graph [as its own web page here](map.html).
 
 ### To see the visualization for the individual days and their death counnt click the link below. 
 
