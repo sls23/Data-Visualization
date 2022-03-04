@@ -37,14 +37,33 @@ You can explore this graph [as its own web page here](femalegraph.html).
 
 
 ## Facts Learned 
-1. The two age groups that were most effected by Cholera were the people below the age of 10 and above the age of 80. This is not surprising since those over 80 probably have weaker or comprimised immune systems and those under 10 may have no had enough time to stregthen theirs yet. 
-2. The difference in deaths between age groups was not vastly different between the two genders. In both cases regardless of gender the older and younger group were effected. This leads me to believe that gender was likely not a huge influence. There were 284 male deaths and 287 female deaths again not drawing major differences between the genders.
+1.The two age groups that were most effected by Cholera were the people below the age of 10 and above the age of 80. This is not surprising since those over 80 probably have weaker or comprimised immune systems and those under 10 may have no had enough time to stregthen theirs yet. 
+2.The difference in deaths between age groups was not vastly different between the two genders. In both cases regardless of gender the older and younger group were effected. This leads me to believe that gender was likely not a huge influence. There were 284 male deaths and 287 female deaths again not drawing major differences between the genders.
 
 ![male](https://user-images.githubusercontent.com/95446588/156775026-1b5a5fb7-c7c1-4830-bda8-cef10c61e08d.jpg)
 ![female](https://user-images.githubusercontent.com/95446588/156775105-9bb520d3-35cf-4d9a-ba4c-e6c1ac158a05.jpg)
 
-3. We can see that the days that resulted in the most deaths were August 1 and August 2. The deaths leading up to August 1 are doubled after this day. August 2 reslts in fewer deaths than the 1st but still a significantly higher number. This data could be used to see what day majority of people were infected based on when they all died. 
+3.We can see that the days that resulted in the most deaths were August 1 and August 2. The deaths leading up to August 1 are doubled after this day. August 2 reslts in fewer deaths than the 1st but still a significantly higher number. This data could be used to see what day majority of people were infected based on when they all died. 
 ![days](https://user-images.githubusercontent.com/95446588/156775124-6e74c157-c183-46be-936f-18faa3ba1718.jpg)
+
+## References 
+### List of References I used to create my map 
+https://observablehq.com/@d3/d3-autotype
+https://www.d3indepth.com/zoom-and-pan/
+https://www.w3schools.com/css/css_positioning.asp
+https://www.d3-graph-gallery.com/graph/interactivity_tooltip.html
+http://using-d3js.com/04_07_ordinal_scales.html
+https://benclinkinbeard.com/d3tips/using-arrow-functions-with-d3/
+http://using-d3js.com/05_02_lines.html
+https://ishadeed.com/article/min-max-css/
+
+
+### List of References I used to create my barcharts 
+https://www.youtube.com/watch?v=IJ8pH19qPkg&list=PLlbbWgBRF8EfU-MZNicdIGVKMIX-6krG8&index=15
+
+
+### List of References I used to create my website 
+https://github.com/melaniewalsh/Sample-Map-Website
 
 
 
