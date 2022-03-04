@@ -5,7 +5,7 @@
 The way I began my design process was by first sketching out my ideas so that I could then have a plan set when it came to udnerstanding the code. I set out the steps in the order I had thought I would want to proceed with.
 
 
-![male](https://user-images.githubusercontent.com/95446588/156775026-1b5a5fb7-c7c1-4830-bda8-cef10c61e08d.jpg)
+![IMG_8500](https://user-images.githubusercontent.com/95446588/156775136-beceb852-610a-4c1d-a39e-3fb936dd82ce.jpg)
 
 ## Design Choices 
 I chose to create visualizations that isolated the deaths of males and females individually for comparison. To do so I had to create separate datasets. 
@@ -18,7 +18,13 @@ The filter I chose on the map allows you to select to see males or females as we
 ## Facts Learned 
 1. The two age groups that were most effected by Cholera were the people below the age of 10 and above the age of 80. This is not surprising since those over 80 probably have weaker or comprimised immune systems and those under 10 may have no had enough time to stregthen theirs yet. 
 2. The difference in deaths between age groups was not vastly different between the two genders. In both cases regardless of gender the older and younger group were effected. This leads me to believe that gender was likely not a huge influence. There were 284 male deaths and 287 female deaths again not drawing major differences between the genders.
+
+![male](https://user-images.githubusercontent.com/95446588/156775026-1b5a5fb7-c7c1-4830-bda8-cef10c61e08d.jpg)
+![female](https://user-images.githubusercontent.com/95446588/156775105-9bb520d3-35cf-4d9a-ba4c-e6c1ac158a05.jpg)
+
 3. We can see that the days that resulted in the most deaths were August 1 and August 2. The deaths leading up to August 1 are doubled after this day. August 2 reslts in fewer deaths than the 1st but still a significantly higher number. This data could be used to see what day majority of people were infected based on when they all died. 
+![days](https://user-images.githubusercontent.com/95446588/156775124-6e74c157-c183-46be-936f-18faa3ba1718.jpg)
+
 
 ## Cholera Map 
 
