@@ -46,6 +46,10 @@ You can explore this graph [as its own web page here](femalegraph.html).
 3.We can see that the days that resulted in the most deaths were August 1 and August 2. The deaths leading up to August 1 are doubled after this day. August 2 reslts in fewer deaths than the 1st but still a significantly higher number. This data could be used to see what day majority of people were infected based on when they all died. 
 ![days](https://user-images.githubusercontent.com/95446588/156775124-6e74c157-c183-46be-936f-18faa3ba1718.jpg)
 
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KPb2LeDHLD8?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## References 
 ### List of References I used to create my map 
 1. https://observablehq.com/@d3/d3-autotype
